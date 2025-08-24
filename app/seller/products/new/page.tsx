@@ -38,6 +38,7 @@ export default function NewProductPage() {
     fabric: "",
     occasion: "",
     stock: "1",
+    originalSku: "",
     tags: [] as string[],
   })
 
@@ -198,6 +199,16 @@ export default function NewProductPage() {
                     placeholder="e.g., Fabindia, Biba"
                   />
                 </div>
+              </div>
+
+              <div>
+                <Label htmlFor="originalSku">Original Item SKU</Label>
+                <Input
+                  id="originalSku"
+                  value={productData.originalSku}
+                  onChange={(e) => setProductData({ ...productData, originalSku: e.target.value })}
+                  placeholder="Enter SKU from original website"
+                />
               </div>
             </CardContent>
           </Card>
